@@ -12,5 +12,5 @@ En el siguiente tutorial se mostrará un paso a paso acerca de como crear una re
 Para su instalación primero debe ingresar a la página de Orange:
 
 ###Descargar 
- *[Orange 3 descargar](https://orange.biolab.si/download/)
+- [Orange 3 descargar](https://orange.biolab.si/download/)
 
