@@ -2,23 +2,78 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Welcome to MkDocs"
+            "text": "Tutorial Orange 3\n\n\nIntroducci\u00f3n\n\n\nEn el siguiente tutorial se mostrar\u00e1 un paso a paso acerca de como crear una regresi\u00f3n lineal con la herramienta Orange 3\n\n\nInstalaci\u00f3n en Windows 10\n\n\nPara su instalaci\u00f3n primero debe ingresar a la p\u00e1gina de Orange:\n\n\nDescargar\n\n\n\n\nOrange 3 descargar",
+            "title": "Tutorial Orange 3"
         },
         {
-            "location": "/#welcome-to-mkdocs",
-            "text": "For full documentation visit  mkdocs.org .",
-            "title": "Welcome to MkDocs"
+            "location": "/#tutorial-orange-3",
+            "text": "",
+            "title": "Tutorial Orange 3"
         },
         {
-            "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
+            "location": "/#introduccion",
+            "text": "En el siguiente tutorial se mostrar\u00e1 un paso a paso acerca de como crear una regresi\u00f3n lineal con la herramienta Orange 3",
+            "title": "Introducci\u00f3n"
         },
         {
-            "location": "/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "location": "/#instalacion-en-windows-10",
+            "text": "Para su instalaci\u00f3n primero debe ingresar a la p\u00e1gina de Orange:",
+            "title": "Instalaci\u00f3n en Windows 10"
+        },
+        {
+            "location": "/#descargar",
+            "text": "Orange 3 descargar",
+            "title": "Descargar"
+        },
+        {
+            "location": "/crear-regresion/",
+            "text": "Creando una regresion lineal\n\n\nCrear un nuevo workflow\n\n\nAbrir la herramienta\n\n\n\n\nAl momento de abrir la herramienta, nos encontramos con la siguiente pantalla.\n\n\n\n\n\n\n\n\n\n\n\n\nDe las opciones disponibles seleccionaremos, \n\u201cNew\u201d\n para crear un nuevo proyecto.\n\n\n\n\n\n\n\n\n\n\n\n\nAsignamos un nombre a nuestro trabajo.\n\n\n\n\n\n\n\n\nOpciones disponibles\n\n\n\n\nDentro de la paleta ubicada en la parte derecha, encontraremos una serie de opciones.\n\n\n\n\n\nIngresar datos por archivo\n\n\n\n\nPara nuestro caso vamos a trabajar con datos q se encuentran dentro de una planilla excel, por lo tanto,\nnecesitaremos descargar los datos desde el siguiente \nlink\n.\n\n\n\n\n\n\n\n\nPara cargar el archivo utilizaremos la opcion \n\"File\"\n que se encuetra dentro de la categor\u00eda Data de Orange\n\n\n\n\n\n\n\n\n\n\n\n\nDentro del elemento \n\"File\"\n seleccionaremos nuestro archivo excel con los datos. En este caso se llama\n\ndemo01MultiReg.xls\n.\n\n\n\n\n\n\n\n\n\n\n\n\nImportante\n: en la tabla que aparece debemos cambiar la opcion que aparece a \nskip\n en caso de que el dato de \nesa columna no nos interese. De lo contrario, debemos cambiar la opci\u00f3n a \nfeature\n. Para nuestro ejemplo solo seleccionamos\nlos datos \nHeight\n y \nWeight\n, y el resto de las columnas del archivo las ignoramos.\n\n\n\n\n\n\nDibujar los datos\n\n\n\n\nAl momento de cargar los datos, los podemos graficar con la herramienta \nPaint Data\n que se encuentra en la categor\u00eda \nData\n.\n\n\nHasta el momento tendremos algo como esto:\n\n\n\n\n\nDibujar la regresi\u00f3n lineal con los datos\n\n\n\n\nOtra forma de graficar es con la herramienta \nScatter Plot\n que se encuentra en la categor\u00eda \nVisualize\n. Esta herramienta, aparte de dibujar los datos, nos permite dibujar una funci\u00f3n lineal en la grafica de puntos dispersos, esta funci\u00f3n representa la regresi\u00f3n lineal. \nImportante tener seleccionada la opci\u00f3n \nShow regression line\n para que efectivamente se muestre la regresi\u00f3n lineal\n\n\n\n\n\n\nCrear la funci\u00f3n de regresi\u00f3n lineal\n\n\n\n\nPara crear la funci\u00f3n de regresi\u00f3n lineal primero tenemos que definir un \ntarget\n dentro de las columnas de datos seleccionados, este \ntarget\n es la variable dependiente la cual nos interesa predecir.\n\n\nSelccionar el target se puede hacer en el momento que se crea el archivo, o con la herramienta \nSelect Columns\n. En este caso utilizaremos la segunda opci\u00f3n y marcaremos el campo \nWeight\n como \ntarget\n y \nHeight\n com \nfeature\n.\n\n\n\n\n\n\n\n\n\nLo siguiente es utilizar la herramienta \nLinear Regression\n que se encuentra en la categor\u00eda \nModel\n. Esto nos crear\u00e1 un modelo de predicci\u00f3n lineal.\n\n\nPara conocer los coeficientes de la funci\u00f3n lineal, utilizamos la herramienta \nData Table\n de la categor\u00eda \nData\n.\n\n\nLa funci\u00f3n quedar\u00eda de la siguiente forma: \nWeight = 3.8181490*Height - 132.9910068\n.\n\n\n\n\n\nTestear el modelo de regresi\u00f3n lineal\n\n\n\n\nPara testear el la funci\u00f3n utilizaremos la herramienta \nPredictions\n de la categor\u00eda \nEvaluate\n. Esta herramienta necesita del modelo que se obtuvo de la creaci\u00f3n de la regresi\u00f3n lineal, y un set de datos para probar.\n\n\nEn la columna \nLinear Regression\n se encuentra el valor que nos entrega la funci\u00f3n que creamos a partir de los datos y corresponde al \nWeight\n. En las otras 2 columnas se encuentran los datos reales de nuestro archivo.",
+            "title": "Creando una regresion lineal"
+        },
+        {
+            "location": "/crear-regresion/#creando-una-regresion-lineal",
+            "text": "",
+            "title": "Creando una regresion lineal"
+        },
+        {
+            "location": "/crear-regresion/#crear-un-nuevo-workflow",
+            "text": "",
+            "title": "Crear un nuevo workflow"
+        },
+        {
+            "location": "/crear-regresion/#abrir-la-herramienta",
+            "text": "Al momento de abrir la herramienta, nos encontramos con la siguiente pantalla.",
+            "title": "Abrir la herramienta"
+        },
+        {
+            "location": "/crear-regresion/#opciones-disponibles",
+            "text": "Dentro de la paleta ubicada en la parte derecha, encontraremos una serie de opciones.",
+            "title": "Opciones disponibles"
+        },
+        {
+            "location": "/crear-regresion/#ingresar-datos-por-archivo",
+            "text": "Para nuestro caso vamos a trabajar con datos q se encuentran dentro de una planilla excel, por lo tanto,\nnecesitaremos descargar los datos desde el siguiente  link .",
+            "title": "Ingresar datos por archivo"
+        },
+        {
+            "location": "/crear-regresion/#dibujar-los-datos",
+            "text": "Al momento de cargar los datos, los podemos graficar con la herramienta  Paint Data  que se encuentra en la categor\u00eda  Data .  Hasta el momento tendremos algo como esto:",
+            "title": "Dibujar los datos"
+        },
+        {
+            "location": "/crear-regresion/#dibujar-la-regresion-lineal-con-los-datos",
+            "text": "Otra forma de graficar es con la herramienta  Scatter Plot  que se encuentra en la categor\u00eda  Visualize . Esta herramienta, aparte de dibujar los datos, nos permite dibujar una funci\u00f3n lineal en la grafica de puntos dispersos, esta funci\u00f3n representa la regresi\u00f3n lineal.  Importante tener seleccionada la opci\u00f3n  Show regression line  para que efectivamente se muestre la regresi\u00f3n lineal",
+            "title": "Dibujar la regresi\u00f3n lineal con los datos"
+        },
+        {
+            "location": "/crear-regresion/#crear-la-funcion-de-regresion-lineal",
+            "text": "Para crear la funci\u00f3n de regresi\u00f3n lineal primero tenemos que definir un  target  dentro de las columnas de datos seleccionados, este  target  es la variable dependiente la cual nos interesa predecir.  Selccionar el target se puede hacer en el momento que se crea el archivo, o con la herramienta  Select Columns . En este caso utilizaremos la segunda opci\u00f3n y marcaremos el campo  Weight  como  target  y  Height  com  feature .",
+            "title": "Crear la funci\u00f3n de regresi\u00f3n lineal"
+        },
+        {
+            "location": "/crear-regresion/#testear-el-modelo-de-regresion-lineal",
+            "text": "Para testear el la funci\u00f3n utilizaremos la herramienta  Predictions  de la categor\u00eda  Evaluate . Esta herramienta necesita del modelo que se obtuvo de la creaci\u00f3n de la regresi\u00f3n lineal, y un set de datos para probar.  En la columna  Linear Regression  se encuentra el valor que nos entrega la funci\u00f3n que creamos a partir de los datos y corresponde al  Weight . En las otras 2 columnas se encuentran los datos reales de nuestro archivo.",
+            "title": "Testear el modelo de regresi\u00f3n lineal"
         }
     ]
 }

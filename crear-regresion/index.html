@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Creando una regresion lineal - Linear Regression Orange 3</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Creando una regresion lineal";
+    var mkdocs_page_input_path = "crear-regresion.md";
+    var mkdocs_page_url = "/crear-regresion/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Linear Regression Orange 3</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Tutorial Orange 3</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Creando una regresion lineal</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#creando-una-regresion-lineal">Creando una regresion lineal</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#crear-un-nuevo-workflow">Crear un nuevo workflow</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#opciones-disponibles">Opciones disponibles</a></li>
+    
+
+    <li class="toctree-l2"><a href="#ingresar-datos-por-archivo">Ingresar datos por archivo</a></li>
+    
+
+    <li class="toctree-l2"><a href="#dibujar-los-datos">Dibujar los datos</a></li>
+    
+
+    <li class="toctree-l2"><a href="#dibujar-la-regresion-lineal-con-los-datos">Dibujar la regresión lineal con los datos</a></li>
+    
+
+    <li class="toctree-l2"><a href="#crear-la-funcion-de-regresion-lineal">Crear la función de regresión lineal</a></li>
+    
+
+    <li class="toctree-l2"><a href="#testear-el-modelo-de-regresion-lineal">Testear el modelo de regresión lineal</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Linear Regression Orange 3</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Creando una regresion lineal</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="creando-una-regresion-lineal">Creando una regresion lineal</h1>
+<h2 id="crear-un-nuevo-workflow">Crear un nuevo workflow</h2>
+<h3 id="abrir-la-herramienta">Abrir la herramienta</h3>
+<ul>
+<li>Al momento de abrir la herramienta, nos encontramos con la siguiente pantalla.</li>
+</ul>
+<h1 id="_1"></h1>
+<p><img alt="Inicio" src="../img/InicioOrange.PNG" /></p>
+<h1 id="_2"></h1>
+<ul>
+<li>De las opciones disponibles seleccionaremos, <em>“New”</em> para crear un nuevo proyecto.</li>
+</ul>
+<h1 id="_3"></h1>
+<p><img alt="nuevo" src="../img/nuevoProyecto.PNG" /></p>
+<h1 id="_4"></h1>
+<ul>
+<li>Asignamos un nombre a nuestro trabajo.</li>
+</ul>
+<h1 id="_5"></h1>
+<p><img alt="nombre" src="../img/asignaNombre.PNG" /></p>
+<h2 id="opciones-disponibles">Opciones disponibles</h2>
+<ul>
+<li>Dentro de la paleta ubicada en la parte derecha, encontraremos una serie de opciones.
+<img alt="opciones" src="../img/paletaOpciones.PNG" /></li>
+</ul>
+<h2 id="ingresar-datos-por-archivo">Ingresar datos por archivo</h2>
+<ul>
+<li>Para nuestro caso vamos a trabajar con datos q se encuentran dentro de una planilla excel, por lo tanto,
+necesitaremos descargar los datos desde el siguiente <a href="https://help.xlstat.com/customer/es/portal/articles/2062231-como-realizar-una-regresion-lineal-multiple?b_id=9283">link</a>.</li>
+</ul>
+<h1 id="_6"></h1>
+<ul>
+<li>Para cargar el archivo utilizaremos la opcion <em>"File"</em> que se encuetra dentro de la categoría Data de Orange</li>
+</ul>
+<h1 id="_7"></h1>
+<p><img alt="file" src="../img/opcionData.PNG" /></p>
+<h1 id="_8"></h1>
+<ul>
+<li>Dentro del elemento <em>"File"</em> seleccionaremos nuestro archivo excel con los datos. En este caso se llama
+<em>demo01MultiReg.xls</em>.</li>
+</ul>
+<h1 id="_9"></h1>
+<p><img alt="file" src="../img/file.PNG" /></p>
+<h1 id="_10"></h1>
+<ul>
+<li><strong>Importante</strong>: en la tabla que aparece debemos cambiar la opcion que aparece a <em>skip</em> en caso de que el dato de 
+esa columna no nos interese. De lo contrario, debemos cambiar la opción a <em>feature</em>. Para nuestro ejemplo solo seleccionamos
+los datos <strong>Height</strong> y <strong>Weight</strong>, y el resto de las columnas del archivo las ignoramos.</li>
+</ul>
+<h1 id="_11"><img alt="important" src="../img/file-important.PNG" /></h1>
+<h2 id="dibujar-los-datos">Dibujar los datos</h2>
+<ul>
+<li>Al momento de cargar los datos, los podemos graficar con la herramienta <em>Paint Data</em> que se encuentra en la categoría <em>Data</em>.</li>
+<li>Hasta el momento tendremos algo como esto:
+<img alt="graficarData" src="../img/dibujar-dato.PNG" /></li>
+</ul>
+<h2 id="dibujar-la-regresion-lineal-con-los-datos">Dibujar la regresión lineal con los datos</h2>
+<ul>
+<li>Otra forma de graficar es con la herramienta <em>Scatter Plot</em> que se encuentra en la categoría <em>Visualize</em>. Esta herramienta, aparte de dibujar los datos, nos permite dibujar una función lineal en la grafica de puntos dispersos, esta función representa la regresión lineal. <strong>Importante tener seleccionada la opción <em>Show regression line</em> para que efectivamente se muestre la regresión lineal</strong>
+<img alt="graficaLineal" src="../img/graph-linear.PNG" /></li>
+</ul>
+<h2 id="crear-la-funcion-de-regresion-lineal">Crear la función de regresión lineal</h2>
+<ul>
+<li>Para crear la función de regresión lineal primero tenemos que definir un <em>target</em> dentro de las columnas de datos seleccionados, este <em>target</em> es la variable dependiente la cual nos interesa predecir.</li>
+<li>Selccionar el target se puede hacer en el momento que se crea el archivo, o con la herramienta <em>Select Columns</em>. En este caso utilizaremos la segunda opción y marcaremos el campo <strong>Weight</strong> como <em>target</em> y <strong>Height</strong> com <em>feature</em>.
+<img alt="seleccionTarget" src="../img/target-feature.PNG" /></li>
+</ul>
+<h1 id="_12"></h1>
+<ul>
+<li>Lo siguiente es utilizar la herramienta <em>Linear Regression</em> que se encuentra en la categoría <em>Model</em>. Esto nos creará un modelo de predicción lineal.</li>
+<li>Para conocer los coeficientes de la función lineal, utilizamos la herramienta <em>Data Table</em> de la categoría <em>Data</em>.</li>
+<li>La función quedaría de la siguiente forma: <strong>Weight = 3.8181490*Height - 132.9910068</strong>.
+<img alt="coeficientes" src="../img/coeficientesLinearR.PNG" /></li>
+</ul>
+<h2 id="testear-el-modelo-de-regresion-lineal">Testear el modelo de regresión lineal</h2>
+<ul>
+<li>Para testear el la función utilizaremos la herramienta <em>Predictions</em> de la categoría <em>Evaluate</em>. Esta herramienta necesita del modelo que se obtuvo de la creación de la regresión lineal, y un set de datos para probar.</li>
+<li>En la columna <em>Linear Regression</em> se encuentra el valor que nos entrega la función que creamos a partir de los datos y corresponde al <strong>Weight</strong>. En las otras 2 columnas se encuentran los datos reales de nuestro archivo.
+<img alt="testLinearRegression" src="../img/test-linearRegression.PNG" /></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href=".." class="btn btn-neutral" title="Tutorial Orange 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
